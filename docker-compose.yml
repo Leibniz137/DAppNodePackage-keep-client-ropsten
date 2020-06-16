@@ -11,9 +11,8 @@ services:
     image: 'keep-client-ropsten.public.dappnode.eth:0.1.0'
     restart: always
     volumes:
-      - "persistence:/mnt/persistence"
-      - "keystore:/mnt/keystore"
-
+      - 'persistence:/mnt/persistence'
+      - 'keystore:/mnt/keystore'
 volumes:
   persistence: {}
   keystore: {}
