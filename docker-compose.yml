@@ -1,14 +1,14 @@
 version: '3.4'
 services:
-  keep-client.public.dappnode.eth:
+  keep-client-ropsten.public.dappnode.eth:
     build: ./build
     environment:
-      - HTTP_RPC_URL
+      - HTTP_RPC_URL='http://ropsten.dappnode:8545/'
       - KEEP_ETHEREUM_PASSWORD
       - LOG_LEVEL=debug
       - PEERS
-      - WS_RPC_URL
-    image: 'keep-client.public.dappnode.eth:0.1.0'
+      - WS_RPC_URL='ws://ropsten.dappnode:8546/'
+    image: 'keep-client-ropsten.public.dappnode.eth:0.1.0'
     restart: always
     volumes:
       - "persistence:/mnt/persistence"
