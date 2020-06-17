@@ -1,8 +1,8 @@
 # Install
 Access this link using your dappnode wifi:
-http://my.dappnode/#/installer/%2Fipfs%2FQmZUZFPFQohkyT39zcSPSX32jNZC94HkgintFFPdNjpBkp
+http://my.dappnode/#/installer/%2Fipfs%2FQmVgs2egDY872MBsKuAePzcyLqvpkUKdnbHkpXviW2oEKE
 
-current ipfs hash `QmZUZFPFQohkyT39zcSPSX32jNZC94HkgintFFPdNjpBkp`
+current ipfs hash `QmVgs2egDY872MBsKuAePzcyLqvpkUKdnbHkpXviW2oEKE`
 
 # Quick Start
 1. Set `KEEP_ETHEREUM_PASSWORD` and `PEERS` environment variables in config
