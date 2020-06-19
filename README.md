@@ -13,5 +13,5 @@ Note, peers should be a comma-delimited string with no spaces or quotation marks
 2. Wait for ropsten to sync
 3. Copy operator address from package logs
 4. GOTO https://dashboard.keep.network/
-  4a. Delegate your keep tokens to the operator address
-  4b. Authorize the Random Beacon contract
+5. Delegate your keep tokens to the operator address
+6. Authorize the Random Beacon contract
