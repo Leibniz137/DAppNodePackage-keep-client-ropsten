@@ -78,10 +78,10 @@ type Config struct {
 	WsRpcUrl string
 
 	/*
-	[
-	  "/dns4/bootstrap-1.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAkuTUKNh6HkfvWBEkftZbqZHPHi3Kak5ZUygAxvsdQ2UgG",
-	  "/dns4/bootstrap-2.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAmQirGruZBvtbLHr5SDebsYGcq6Djw7ijF3gnkqsdQs3wK"
-	]
+		[
+		  "/dns4/bootstrap-1.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAkuTUKNh6HkfvWBEkftZbqZHPHi3Kak5ZUygAxvsdQ2UgG",
+		  "/dns4/bootstrap-2.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAmQirGruZBvtbLHr5SDebsYGcq6Djw7ijF3gnkqsdQs3wK"
+		]
 	*/
 	Peers []string
 }
@@ -89,7 +89,7 @@ type Config struct {
 func renderTemplate(config Config) {
 	t, err := template.ParseFiles(TEMPLATE_PATH)
 	if err != nil {
-    panic(err)
+		panic(err)
 	}
 
 	f, err := os.Create(CONFIG_PATH)
@@ -195,11 +195,11 @@ func main() {
 
 		fmt.Println("Successfully connected to eth1 rpc endpoint")
 
-    // check block number to see if eth client is synced
+		// check block number to see if eth client is synced
 		header, err := client.HeaderByNumber(context.Background(), nil)
 		if err != nil {
 			fmt.Printf("Failed to retrieve latest block header %s\n", err)
-      time.Sleep(10 * time.Second)
+			time.Sleep(10 * time.Second)
 			continue
 		}
 		zero := big.NewInt(int64(0))
@@ -233,10 +233,10 @@ func main() {
 	}
 
 	config := Config{
-		Address: account.Address.Hex(),
+		Address:    account.Address.Hex(),
 		HttpRpcUrl: httpRpcUrl,
-		Peers: peers,
-		WsRpcUrl: wsRpcUrl,
+		Peers:      peers,
+		WsRpcUrl:   wsRpcUrl,
 	}
 	renderTemplate(config)
 }
