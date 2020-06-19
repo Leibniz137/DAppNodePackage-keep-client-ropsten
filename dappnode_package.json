@@ -1,6 +1,6 @@
 {
   "name": "keep-client-ropsten.public.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "play for keeps!",
   "type": "service",
   "author": "thenateway",
@@ -8,7 +8,7 @@
     "Developer tools"
   ],
   "links": {
-    "homepage": "https://your-project-homepage-or-docs.io"
+    "homepage": "https://github.com/Leibniz137/DAppNodePackage-keep-client-ropsten"
   },
   "license": "GLP-3.0",
   "dependencies": {
