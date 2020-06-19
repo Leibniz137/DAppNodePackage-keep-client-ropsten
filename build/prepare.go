@@ -103,44 +103,43 @@ func renderTemplate(config Config) {
 	w.Flush()
 }
 
-
 /*
 createKeyStore creates a keystore with a single account
 and then returns that account
 */
 func createKeyStore(password string, accountPath string) (accounts.Account, error) {
 
-  ks := keystore.NewKeyStore(KEYSTORE, keystore.StandardScryptN, keystore.StandardScryptP)
-  account, err := ks.NewAccount(password)
-  if err != nil {
-    return accounts.Account{}, err
-  }
-
-  err = os.Rename(account.URL.Path, accountPath)
+	ks := keystore.NewKeyStore(KEYSTORE, keystore.StandardScryptN, keystore.StandardScryptP)
+	account, err := ks.NewAccount(password)
 	if err != nil {
 		return accounts.Account{}, err
 	}
 
-  account.URL.Path = accountPath
-  return account, nil
-}
+	err = os.Rename(account.URL.Path, accountPath)
+	if err != nil {
+		return accounts.Account{}, err
+	}
 
+	account.URL.Path = accountPath
+	return account, nil
+}
 
 func loadKeyStore(password string, filePath string) (accounts.Account, error) {
-  ks := keystore.NewKeyStore(KEYSTORE, keystore.StandardScryptN, keystore.StandardScryptP)
-  jsonBytes, err := ioutil.ReadFile(filePath)
-  if err != nil {
-    return accounts.Account{}, err
-  }
+	ks := keystore.NewKeyStore(KEYSTORE, keystore.StandardScryptN, keystore.StandardScryptP)
+	jsonBytes, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		return accounts.Account{}, err
+	}
 
-  account, err := ks.Import(jsonBytes, password, password)
-  if err != nil {
-    return accounts.Account{}, err
-  }
+	account, err := ks.Import(jsonBytes, password, password)
 
-  return account, nil
+	// NOTE: ErrAccountAlreadyExists hit only on linux/container (not on OS X)
+	if err != nil && err != keystore.ErrAccountAlreadyExists {
+		return accounts.Account{}, err
+	}
+
+	return account, nil
 }
-
 
 func main() {
 
