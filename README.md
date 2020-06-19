@@ -1,10 +1,14 @@
-# Install
+# Keep Random Beacon Dappnode Package
+This dappnode package will allow you to participate in the keep ropsten testnet.
+see: https://keep.network/
+
+## Install
 Access this link using your dappnode wifi:
 http://my.dappnode/#/installer/%2Fipfs%2FQmRpFM6cvPa5Ar2bG8fGmNRERHTK6QMCVa89MjyuPeyXa6
 
 current ipfs hash `QmRpFM6cvPa5Ar2bG8fGmNRERHTK6QMCVa89MjyuPeyXa6`
 
-# Quick Start
+## Quick Start
 1. Set `KEEP_ETHEREUM_PASSWORD` and `PEERS` environment variables in config.
 
 Note, peers should be a comma-delimited string with no spaces or quotation marks, eg:
