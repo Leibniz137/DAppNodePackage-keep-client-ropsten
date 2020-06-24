@@ -13,7 +13,7 @@ current ipfs hash `QmQpsWSZYRwFQhEtwxxYjEDqisAFY3FRU5orbmifiyhveH`
 
 Note, peers should be a comma-delimited string with no spaces or quotation marks, eg:
 ```
-/dns4/bootstrap-0.test.keep.network/tcp/3919/ipfs/16Uiu2HAmCcfVpHwfBKNFbQuhvGuFXHVLQ65gB4sJm7HyrcZuLttH,/dns4/bootstrap-1.test.keep.network/tcp/3919/ipfs/16Uiu2HAm3eJtyFKAttzJ85NLMromHuRg4yyum3CREMf6CHBBV6KY,/dns4/testnet.keep-client.hashd.dev/tcp/3919/ipfs/16Uiu2HAmJsBiNVFNxsJ27NSQEByv39B1M7AKx5FrAc1htqYhHGhU,/dns4/testnet2.keep-client.hashd.dev/tcp/3919/ipfs/16Uiu2HAmAV3sNGXTpdZCguUEd5QqMmg13WZ5dBTtjbhYeQmTHwgM
+/dns4/bootstrap-2.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAmQirGruZBvtbLHr5SDebsYGcq6Djw7ijF3gnkqsdQs3wK,/dns4/bootstrap-3.test.keep.network/tcp/3919/ipfs/16Uiu2HAm8KJX32kr3eYUhDuzwTucSfAfspnjnXNf9veVhB12t6Vf,/dns4/bootstrap-2.test.keep.network/tcp/3919/ipfs/16Uiu2HAmNNuCp45z5bgB8KiTHv1vHTNAVbBgxxtTFGAndageo9Dp
 ```
 2. Wait for ropsten to sync
 3. Copy operator address from package logs
