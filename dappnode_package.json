@@ -1,6 +1,6 @@
 {
   "name": "keep-client-ropsten.public.dappnode.eth",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Run a Keep Random Beacon on the Ropsten Testnet",
   "type": "service",
   "author": "thenateway",
