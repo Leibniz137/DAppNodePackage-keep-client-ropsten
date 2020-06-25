@@ -13,6 +13,6 @@
   },
   "license": "GLP-3.0",
   "dependencies": {
-    "ropsten.dnp.dappnode.eth": "latest"
+    "ropsten.dnp.dappnode.eth": "*"
   }
 }
