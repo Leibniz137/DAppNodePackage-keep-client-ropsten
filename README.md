@@ -4,9 +4,9 @@ see: https://keep.network/
 
 ## Install
 Access this link using your dappnode wifi:
-http://my.dappnode/#/installer/%2Fipfs%2FQmQpsWSZYRwFQhEtwxxYjEDqisAFY3FRU5orbmifiyhveH
+http://my.dappnode/#/installer/%2Fipfs%2FQmdMqndGfjs8HHV1q2gU1jEMQbCaKbWvfwiFreFgJgUTHg
 
-current ipfs hash `QmQpsWSZYRwFQhEtwxxYjEDqisAFY3FRU5orbmifiyhveH`
+current ipfs hash `QmdMqndGfjs8HHV1q2gU1jEMQbCaKbWvfwiFreFgJgUTHg`
 
 ## Quick Start
 1. Set `KEEP_ETHEREUM_PASSWORD` and `PEERS` environment variables in config.
