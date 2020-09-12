@@ -69,7 +69,7 @@ func checkEnvVars(currentEnv []string) []string {
 
 type Config struct {
 	// 0x...
-	Address string
+	EthAddress string
 
 	// http://ropsten.dnp.dappnode.eth:8545/
 	HttpRpcUrl string
@@ -232,7 +232,7 @@ func main() {
 	}
 
 	config := Config{
-		Address:    account.Address.Hex(),
+		EthAddress:    account.Address.Hex(),
 		HttpRpcUrl: httpRpcUrl,
 		Peers:      peers,
 		WsRpcUrl:   wsRpcUrl,
