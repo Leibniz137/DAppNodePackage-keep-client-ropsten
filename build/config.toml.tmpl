@@ -23,6 +23,13 @@ Peers = [
 ]
 Port = 3919
 
+# Use dappnode provided dyndns domain name or static ip
+AnnouncedAddresses = [
+{{- range .AnnouncedAddresses }}
+  "{{ . }}",
+{{- end }}
+]
+
 # Storage is encrypted
 [Storage]
 DataDir = "/mnt/persistence"

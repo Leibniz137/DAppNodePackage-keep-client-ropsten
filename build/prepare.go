@@ -27,6 +27,7 @@ import (
 )
 
 var RequiredEnvVars = [...]string{
+	"ANNOUNCED_ADDRESSES",
 	"HTTP_RPC_URL",
 	"KEEP_ETHEREUM_PASSWORD",
 	"LOG_LEVEL",
@@ -68,6 +69,13 @@ func checkEnvVars(currentEnv []string) []string {
 }
 
 type Config struct {
+	/*
+	Use your dappnode's static ip address or dns name
+
+	eg. "/ip4/80.20.40.233/tcp/3919"
+	*/
+	AnnouncedAddresses []string
+
 	// 0x...
 	EthAddress string
 
@@ -142,7 +150,7 @@ func loadKeyStore(password string, filePath string) (accounts.Account, error) {
 }
 
 func main() {
-
+	var announcedAddresses []string
 	var httpRpcUrl string
 	var peers []string
 	var wsRpcUrl string
@@ -167,6 +175,8 @@ func main() {
 			key := envVar[0]
 			value := envVar[1]
 			switch key {
+			case "ANNOUNCED_ADDRESSES":
+				announcedAddresses = strings.Split(value, ",")
 			case "HTTP_RPC_URL":
 				httpRpcUrl = value
 			case "WS_RPC_URL":
@@ -232,6 +242,7 @@ func main() {
 	}
 
 	config := Config{
+		AnnouncedAddresses: announcedAddresses,
 		EthAddress:    account.Address.Hex(),
 		HttpRpcUrl: httpRpcUrl,
 		Peers:      peers,
