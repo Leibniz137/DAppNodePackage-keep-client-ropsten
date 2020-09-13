@@ -20,3 +20,14 @@ Note, peers should be a comma-delimited string with no spaces or quotation marks
 4. GOTO https://dashboard.keep.network/
 5. Delegate your keep tokens to the operator address
 6. Authorize the Random Beacon contract
+
+## Extracting your operator account
+The operator account is generated automatically for you when this package is initialized.
+The operator account (ie private key) is stored in the data volume for this package,
+so if you delete the dnp completely, including data, then you will lose your operator account.
+
+It is a good idea to back up the account file / json someplace safe like a password manager.
+The (encrypted) account is written to `/mnt/keystore/keep_wallet.json`.
+
+To save this file, simply browse to the `File Manager` section of the DNP package and enter
+this path into the `DOWNLOAD FILE FROM PACKAGE` input.
