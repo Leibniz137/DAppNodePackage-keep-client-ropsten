@@ -1,4 +1,4 @@
-# Keep Random Beacon Dappnode Package
+# Keep Random Beacon Dappnode Package (Ropsten Testnet)
 This dappnode package will allow you to participate in the keep ropsten testnet.
 see: https://keep.network/
 
@@ -17,7 +17,7 @@ Note, peers should be a comma-delimited string with no spaces or quotation marks
 ```
 2. Wait for ropsten to sync
 3. Copy operator address from package logs
-4. GOTO https://dashboard.keep.network/
+4. GOTO https://dashboard.test.keep.network/
 5. Delegate your keep tokens to the operator address
 6. Authorize the Random Beacon contract
 
